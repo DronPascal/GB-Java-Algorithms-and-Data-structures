@@ -46,11 +46,11 @@ public class hw2 {
         System.out.println("2) Searching " + searching + " in " + Arrays.toString(arrSort));
 
         start = System.nanoTime();
-        System.out.println(linearSearch(arrSort, searching));
+        linearSearch(arrSort, searching);
         System.out.println("Linear search: " + (System.nanoTime() - start));
 
         start = System.nanoTime();
-        System.out.println(booleanSearch(arrSort, searching));
+        booleanSearch(arrSort, searching);
         System.out.println("Boolean search: " + (System.nanoTime() - start) + "\n");
 
         /*
