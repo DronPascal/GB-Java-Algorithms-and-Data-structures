@@ -44,13 +44,13 @@ public class hw1 {
         //хотя bs и bs2 - разные объекты, но их класс реализует интерфейс Comparable, поэтому при их сравнении используется примитивный тип, хранящийся внутри, поэтому результатом будет true
         System.out.println("Bool: " + (bs == bs2));
 
-        //так то выходит? String необязательно ссылочный тип?
+        //String
         String str2 = "Str";  //ранее было написало String str = "Str";
-        System.out.println("String: " + (str == str2));  //здесь ведет себя как примитивный
+        System.out.println("String: " + (str == str2));  //true
         String str3 = new String("Str");
-        System.out.println("String: " + (str == str3));  //здсь как ссылочный
+        System.out.println("String: " + (str == str3));  //false
         String str4 = str3;
-        System.out.println("String: " + (str3 == str4));  //тут все логично
+        System.out.println("String: " + (str3 == str4));  //false
 
         //Случай когда: переменные не ссылаютя на одну ячейку памяти и их класс не реализует интерфейс Comparable -> результатом будет false
         myInt myInt2 = new myInt(1);  //ранее было написано myInt myInt = new myInt(1);
