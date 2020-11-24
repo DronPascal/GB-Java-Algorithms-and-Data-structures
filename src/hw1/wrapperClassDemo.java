@@ -1,38 +1,22 @@
 package hw1;
 
 //суть начинается со строчки Integer I = 5;
-class Person {
-
-    private String name;
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
+public class wrapperClassDemo {
     public static void main(String[] arguments) {
-        Person person = new Person();
-        person.setName("Bob");
+        int i = 5;  //примитивный тип
+        changeValue(i);  //передается значение
+        System.out.println(i);
 
-        int i = 5;
-        setPersonName(person, i);
-        System.out.println(person.getName() + " " + i);
-
-        Integer I = 5;
-        setPersonName(person, I);
-        System.out.println(person.getName() + " " + I);
+        Integer I = 5;  //ссылочный тип
+        changeValue(I);  //I передается по ссылке
+        System.out.println(I+ ", а должно быть 99?");
     }
 
-    private static void setPersonName(Person person, int num) {
-        person.setName("Linda");
+    static void changeValue(int num) {
         num = 99;
     }
 
-    private static void setPersonName(Person person, Integer num) {
-        person.setName("Linda");
+    static void changeValue(Integer num) {
         num = 99;
     }
 }
