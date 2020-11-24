@@ -60,10 +60,6 @@ public class hw1 {
         myInt myInt3 = myInt;
         System.out.println("myInt: " + (myInt == myInt3) + " (" + myInt + "=" + myInt3 + ")");
 
-        //ОСТАЛИСЬ ВОПРОСЫ.
-        // Что за зверь такой String?
-        // Почему не выполняют свою задачу классы-обертки над примитивными типами?
-
         //КАКАЯ ИММИТАЦИЯ ПЕРЕБОРА? ЧТО ЗА БРЕДОВОЕ ЗАДАНИЕ? FACEPALM
         //получите распишитесь
         System.out.println("\nsearch started");
