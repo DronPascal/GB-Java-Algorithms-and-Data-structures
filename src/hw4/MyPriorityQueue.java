@@ -3,7 +3,7 @@ package hw4;
 import java.util.LinkedList;
 
 public class MyPriorityQueue {
-    private LinkedList queue;
+    private LinkedList<Integer> queue;
 
     public MyPriorityQueue() {
         queue = new LinkedList();
@@ -13,9 +13,9 @@ public class MyPriorityQueue {
         return queue.isEmpty();
     }
 
-    public void insert(Object elem) {
+    public void insert(Integer elem) {
         for (int i = 0, size = queue.size(); i<size; i++)
-            if (queue.get(i)<elem){
+            if (queue.get(i)>elem){
                 queue.add(i, elem);
                 return;
             }
@@ -28,5 +28,9 @@ public class MyPriorityQueue {
 
     public Object peek() {
         return queue.getFirst();
+    }
+
+    public void print() {
+        System.out.println(queue.toString());
     }
 }
