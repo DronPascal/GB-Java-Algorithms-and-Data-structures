@@ -20,7 +20,7 @@ public class task4 {
         int aKey;
         int size = 66;
 
-        HashTable hTable = new HashTable(size);
+        HashTable2 hTable = new HashTable2(size);
         Random rand = new Random();
 
         for (int j = 0; j < 15; j++) {
@@ -74,7 +74,7 @@ class HashTable2 {
         int key = item.getKey();
         int hashVal = hashFunc(key);
         int stepSize = hashFuncDouble(key);
-        while (hashArr[hashVal] != null && hashArr[hashVal].getKey() != -1) {
+        while (hashArr[hashVal] != null && hashArr[hashVal].getKey() >=0) {
             hashVal += stepSize;
             hashVal %= arrSize;
         }
